@@ -581,18 +581,7 @@ footer .parah p {
     color: #777777;
 }
 
-.ft-botttom span {
-    font-family: Plus Jakarta Sans;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 19.2px;
-    letter-spacing: -0.04em;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    color: #000000;
-}
-
+.ft-botttom span,
 .ft-botttom a {
     font-family: Plus Jakarta Sans;
     font-size: 16px;
@@ -605,4 +594,8 @@ footer .parah p {
     text-underline-position: from-font;
     text-decoration-skip-ink: auto;
     color: #000000;
+}
+.ft-botttom span,
+.ft-botttom span a{
+    text-decoration: none;
 }
