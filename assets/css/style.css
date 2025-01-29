@@ -362,27 +362,19 @@ header.site-header {
 }
 
 .serv-left h1 {
-    font-family: Plus Jakarta Sans;
     font-size: 48px;
     font-weight: 600;
     line-height: 52.8px;
     letter-spacing: -0.04em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #1B1B1B;
     padding-bottom: 12px;
 }
 
 .serv-left p {
-    font-family: Plus Jakarta Sans;
     font-size: 20px;
     font-weight: 400;
     line-height: 26px;
     letter-spacing: -0.04em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #3E3E3E;
     padding-bottom: 40px;
 }
@@ -419,53 +411,227 @@ header.site-header {
 }
 
 .serv-right ul li .no-box span {
-    font-family: Plus Jakarta Sans;
     font-size: 32px;
     font-weight: 500;
     line-height: 38.4px;
     letter-spacing: -0.05em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #FFFFFF;
 }
 
 .serv-right ul li .cntn h3 {
-    font-family: Plus Jakarta Sans;
     font-size: 32px;
     font-weight: 600;
     line-height: 38.4px;
     letter-spacing: -0.04em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #000000;
     padding-bottom: 9px;
 }
 
 .serv-right ul li .cntn p {
-    font-family: Plus Jakarta Sans;
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.05em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #6F6F6F;
 }
 
+/* Contact-Sec */
 
+.contact-sec {
+    width: 100%;
+    padding: 60px 0;
+}
 
+.contect-content {
+    background: linear-gradient(107.65deg, #FFFFFF 25.86%, #E8D7FF 74.14%);
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    position: relative;
+}
+.contect-content::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -15px;
+    left: 303px;
+    z-index: 1;
+    width: 100%;
+    max-width: 344px;
+    height: 612px;
+    object-fit: contain;
+    background-image: url(../images/contact-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.contect-content .cnt-left {
+    width: 50%;
+}
 
+.contect-content .cnt-left h1 {
+    margin: 30px 0 12px 0;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 52.8px;
+    letter-spacing: -0.04em;
+    color: #1B1B1B;
+}
 
+.contect-content .cnt-left p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.04em;
+    color: #4F4F4F;
+}
 
+.contect-content .cnt-left .social-list {
+    margin-top: 198px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
+.contect-content .cnt-left .social-list a {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20.16px;
+    letter-spacing: -0.04em;
+    color: #1B1B1B;
+}
 
+.contect-content .cnt-left .social-list a .icon-box {
+    box-shadow: 0px 0px 0px 4px #A15EFB33;
+    padding: 8px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
 
+.contect-content .cnt-left .social-list a .icon-box img {
+    width: 16px;
+    height: 16px;
+    display: block;
+    object-fit: contain;
+}
 
+.contect-content .cnt-right {
+    width: 50%;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+}
 
+h4.form-heading {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38.4px;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 32px;
+    align-items: flex-start;
+}
+
+form .field-row {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+form .field-row .field-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+form .field-row .field-column label {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20.16px;
+    letter-spacing: -0.04em;
+    color: #1B1B1B;
+}
+
+form .field-row .field-column label span {
+    font-weight: 400;
+}
+
+form .field-row .field-column input,
+form .field-row .field-column select,
+form .field-row .field-column textarea {
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20.16px;
+    letter-spacing: -0.04em;
+    color: #777777;
+    background-color: #F3F3F3;
+    border-radius: 6px;
+    border: none;
+}
+
+form .field-row .field-column select {
+    appearance: none;
+    background-image: url(../images/select-img.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: right 16px center;
+}
+
+form .field-row .field-column textarea {
+    min-height: 108px;
+    overflow-y: auto;
+    resize: vertical;
+    max-height: 200px;
+}
+
+form .check-box label {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20.16px;
+    letter-spacing: -0.04em;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    cursor: pointer;
+}
+
+form .check-box label .fake-cb {
+    width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    background-color: #F3F3F3;transition: all 0.3s;
+    background-image: url(../images/check-line.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0px;
+}
+.check-box label:has(input:checked) .fake-cb{
+    background-size: 20px;
+}
+form .check-box label input[type="checkbox"] {
+    display: none;
+}
+
+form button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 0px 4px #A15EFB33 !important;
+}
 
 
 
@@ -507,14 +673,10 @@ footer .parah {
 }
 
 footer .parah p {
-    font-family: Plus Jakarta Sans;
     font-size: 16px;
     font-weight: 400;
     line-height: 22.4px;
     letter-spacing: -0.04em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #777777;
 }
 
@@ -533,14 +695,10 @@ footer .parah p {
 }
 
 .ft-mid ul li h3 {
-    font-family: Plus Jakarta Sans;
     font-size: 20px;
     font-weight: 600;
     line-height: 25.2px;
     letter-spacing: -0.04em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #1B1B1B;
 }
 
@@ -551,14 +709,10 @@ footer .parah p {
 }
 
 .ft-mid ul .links a {
-    font-family: Plus Jakarta Sans;
     font-size: 16px;
     font-weight: 400;
     line-height: 20.16px;
     letter-spacing: -0.04em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #1B1B1B;
 }
 
@@ -570,20 +724,15 @@ footer .parah p {
 }
 
 .ft-botttom p {
-    font-family: Plus Jakarta Sans;
     font-size: 16px;
     font-weight: 400;
     line-height: 20.8px;
     letter-spacing: -0.04em;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
     color: #777777;
 }
 
 .ft-botttom span,
 .ft-botttom a {
-    font-family: Plus Jakarta Sans;
     font-size: 16px;
     font-weight: 400;
     line-height: 19.2px;
@@ -595,7 +744,8 @@ footer .parah p {
     text-decoration-skip-ink: auto;
     color: #000000;
 }
+
 .ft-botttom span,
-.ft-botttom span a{
+.ft-botttom span a {
     text-decoration: none;
 }
