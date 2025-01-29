@@ -665,10 +665,20 @@ header.site-header {
     transition: all 0.3s;
     border-radius: 50%;
     box-shadow: 0px 0px 0px 4px #A15EFB33;
-    background-image: url(../images/check-line.svg);
+    background-image: url(../images/ep_right.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 17px;
+    background-size: 24px;
+}
+
+.svc-nav .swiper-button-next:active {
+    transform: scale(-0.9);
+    transition: all 0.1s;
+}
+
+.svc-nav .swiper-button-prev:active {
+    transform: scale(0.9);
+    transition: all 0.1s;
 }
 
 .svc-nav .swiper-button-next::after,
