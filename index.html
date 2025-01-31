@@ -32,6 +32,15 @@
                 </a>
             </div>
             <nav class="head-nav">
+                <div class="nv-close">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="30" height="30" rx="6" fill="#F7F7F7" />
+                        <rect x="0.5" y="0.5" width="29" height="29" rx="5.5" stroke="black" stroke-opacity="0.1" />
+                        <path
+                            d="M13.9394 15.0001L8.09473 9.15538L9.15538 8.09473L15.0001 13.9394L20.8447 8.09473L21.9054 9.15538L16.0607 15.0001L21.9054 20.8447L20.8447 21.9054L15.0001 16.0607L9.15538 21.9054L8.09473 20.8447L13.9394 15.0001Z"
+                            fill="#1E1E1E" />
+                    </svg>
+                </div>
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#">Servizi</a></li>
@@ -139,10 +148,10 @@
                             Strumenti avanzati e sicuri
                         </li>
                         <li>
-                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                            <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
-                                    d="M28.75 25V27.5H20V25H23.075L15 5.7625C14.7625 5.175 14.375 4.7 13.825 4.325C13.275 3.95 12.675 3.75 12.0125 3.75C11.125 3.75 10.35 4.0875 9.7 4.7375C9.05 5.3875 8.75 6.15 8.75 7.05V11.25H10C12.7625 11.25 15 13.4875 15 16.25V27.5H10C10.7625 26.45 11.25 25.1625 11.25 23.75C11.25 20.3 8.45 17.5 5 17.5C4.1125 17.5 3.2625 17.6875 2.5 18.025V11.25H6.25V7.05C6.25 6 6.5375 5 7.0375 4.15C7.55 3.275 8.2375 2.575 9.125 2.0375C10 1.5125 10.9625 1.25 12.0125 1.25C13.1875 1.25 14.25 1.575 15.2 2.2125C16.15 2.85 16.875 3.7125 17.3375 4.7625L25.825 25H28.75ZM8.75 23.75C8.75 25.825 7.075 27.5 5 27.5C2.925 27.5 1.25 25.825 1.25 23.75C1.25 21.675 2.925 20 5 20C7.075 20 8.75 21.675 8.75 23.75ZM6.25 23.75C6.25 23.0625 5.6875 22.5 5 22.5C4.3125 22.5 3.75 23.0625 3.75 23.75C3.75 24.4375 4.3125 25 5 25C5.6875 25 6.25 24.4375 6.25 23.75Z"
+                                    d="M10.9999 17.5938L5.81242 20.7187C5.58326 20.8646 5.34367 20.9271 5.09367 20.9062C4.84367 20.8854 4.62492 20.8021 4.43742 20.6562C4.24992 20.5104 4.10409 20.3283 3.99992 20.11C3.89576 19.8917 3.87492 19.6467 3.93742 19.375L5.31242 13.4688L0.718673 9.5C0.51034 9.3125 0.38034 9.09875 0.328673 8.85875C0.277006 8.61875 0.292423 8.38458 0.374923 8.15625C0.457423 7.92792 0.582423 7.74042 0.749923 7.59375C0.917423 7.44708 1.14659 7.35333 1.43742 7.3125L7.49992 6.78125L9.84367 1.21875C9.94784 0.96875 10.1095 0.78125 10.3287 0.65625C10.5478 0.53125 10.7716 0.46875 10.9999 0.46875C11.2283 0.46875 11.452 0.53125 11.6712 0.65625C11.8903 0.78125 12.052 0.96875 12.1562 1.21875L14.4999 6.78125L20.5624 7.3125C20.8541 7.35417 21.0833 7.44792 21.2499 7.59375C21.4166 7.73958 21.5416 7.92708 21.6249 8.15625C21.7083 8.38542 21.7241 8.62 21.6724 8.86C21.6208 9.1 21.4903 9.31333 21.2812 9.5L16.6874 13.4688L18.0624 19.375C18.1249 19.6458 18.1041 19.8908 17.9999 20.11C17.8958 20.3292 17.7499 20.5112 17.5624 20.6562C17.3749 20.8013 17.1562 20.8846 16.9062 20.9062C16.6562 20.9279 16.4166 20.8654 16.1874 20.7187L10.9999 17.5938Z"
                                     fill="#A15EFB" />
                             </svg>
                             Affidabilità e puntualità
@@ -532,9 +541,14 @@
                             <div class="field-column">
                                 <label for="">Servizio di interesse <span>(opzionale)</span></label>
                                 <select name="" id="">
-                                    <option value="">Seleziona il servizio a cui sei interessato</option>
-                                    <option value="">Seleziona il servizio a cui sei interessato</option>
-                                    <option value="">Seleziona il servizio a cui sei interessato</option>
+                                    <option value="" selected disabled>Seleziona il servizio a cui sei interessato
+                                    </option>
+                                    <option value="">Pulizia Case Vacanza</option>
+                                    <option value="">Pulizie di Condominio</option>
+                                    <option value="">Pulizia Uffici e Negozi</option>
+                                    <option value="">Pulizia Post Ristrutturazione</option>
+                                    <option value="">Pulizia Eventi e Matrimoni</option>
+                                    <option value="">Pulizia Armadi e Restyling</option>
                                 </select>
                             </div>
                         </div>
@@ -632,54 +646,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            if (window.innerWidth <= 768) {
-                var swiper = new Swiper(".svSwiper", {
-                    slidesPerView: "auto",
-                    centeredSlides: true,
-                    spaceBetween: 10,
-                    loop: true,
-                    pagination: {
-                        el: ".sv-pagination",
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: ".sv-button-next",
-                        prevEl: ".sv-button-prev",
-                    }
-                });
-
-                // Make sure to add Swiper classes only on mobile
-                document.querySelector(".swiper-wrapper").classList.add("swiper-wrapper-active");
-                document.querySelectorAll(".swiper-slide").forEach(slide => slide.classList.add("swiper-slide-active"));
-            }
-        });
-
-        var swiper = new Swiper(".revSwiper", {
-            slidesPerView: "auto",
-            centeredSlides: true,
-            spaceBetween: 30,
-            loop: true,
-            speed: 800, // Transition speed
-            autoplay: {
-                delay: 3000,       // No delay between slides
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".rev-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".rev-button-next",
-                prevEl: ".rev-button-prev",
-            }
-        });
-
-
-    </script>
 
 </body>
 
