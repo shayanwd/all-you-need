@@ -550,8 +550,6 @@
         letter-spacing: -0.04em;
     }
 
-    .rev-dets span {}
-
     .contect-content {
         padding: 20px;
     }
@@ -579,8 +577,6 @@
     .contect-content .cnt-left .social-list {
         margin-top: 20px;
     }
-
-    .contect-content .cnt-left .social-list a {}
 
     .contect-content .cnt-right {
         padding: 20px;
