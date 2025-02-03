@@ -213,6 +213,44 @@
     .nostri-title h2 {
         max-width: 500px;
     }
+
+
+
+
+
+
+
+
+
+    .policy-sec {
+        padding: 180px 0px 0px;
+        margin-bottom: 0px;
+    }
+
+    .policy-wrap h1 {
+        font-size: 38px;
+        line-height: 42.8px;
+        letter-spacing: -0.025em;
+    }
+
+    .policy-wrap p,
+    .policy-wrap span,
+    .policy-wrap ul li {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.025em;
+    }
+
+    .policy-wrap h2 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: 50px;
+        letter-spacing: -0.025em;
+    }
+
+    .policy-wrap ul {
+        padding-left: 20px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -733,9 +771,58 @@
     .perks-sec {
         padding: 35px 0px 35px;
     }
+
+    .footer-top .ft-logo img {
+        min-width: 129px;
+    }
+
+    .footer-top a.site-btn {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -0.05em;
+    }
+
+    .footer-container {
+        padding: 0px 20px;
+    }
+
+
+
+
+
+
+
+
+
+    .policy-wrap h1 {
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: -0.02em;
+        margin-bottom: 15px;
+    }
+
+    .policy-wrap p,
+    .policy-wrap span,
+    .policy-wrap ul li {
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+    }
+
+    .policy-wrap h2 {
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 40px;
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;
+    }
+
+    .policy-wrap p {
+        margin-bottom: 10px;
+    }
 }
 
-@media only screen and (max-width: 499px) {
+@media only screen and (max-width: 400px) {
 
     header.site-header {
         top: 10px;
@@ -938,10 +1025,6 @@
         padding: 25px 0px;
     }
 
-    .contact-sec {
-        padding: 20px 8px;
-    }
-
     .contect-content .cnt-left {
         padding: 8px;
     }
@@ -1060,4 +1143,106 @@
         aspect-ratio: 282/350;
     }
 
+    .container {
+        padding: 0px 10px;
+    }
+
+    .nostri-title:not(:has(.ttl-wrap)) {
+        flex-direction: row;
+    }
+
+
+
+
+
+
+    .contect-content .cnt-left .social-list a {
+        font-size: 12px;
+        line-height: 15.12px;
+        letter-spacing: -0.04em;
+    }
+
+    .contect-content {
+        padding: 20px 8px;
+    }
+
+    .contect-content .cnt-right {
+        padding: 20px 12px;
+    }
+
+    h4.form-heading {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.04em;
+    }
+
+    form,
+    form .field-row {
+        gap: 16px;
+    }
+
+    form .field-row .field-column label {
+        font-size: 12px;
+        line-height: 15.12px;
+        letter-spacing: -0.04em;
+    }
+
+    form .field-row .field-column {
+        gap: 8px;
+    }
+
+    form .field-row .field-column input,
+    form .field-row .field-column select,
+    form .field-row .field-column textarea {
+        font-size: 12px;
+        line-height: 15.12px;
+        letter-spacing: -0.03em;
+    }
+
+    form .field-row .field-column select {
+        background-image: none;
+    }
+
+    form .check-box label {
+        gap: 8px;
+        font-size: 12px;
+        line-height: 15.12px;
+        letter-spacing: -0.04em;
+    }
+
+    form .check-box label .fake-cb {
+        height: 20px;
+        width: 20px;
+        border-radius: 5px;
+    }
+
+    .footer-container {
+        padding: 0px 10px;
+    }
+
+
+
+    .policy-sec {
+        padding: 120px 0px 0px;
+    }
+
+    .policy-wrap h1 {
+        font-size: 28px;
+        line-height: 38px;
+        letter-spacing: -0.02em;
+    }
+
+    .policy-wrap p,
+    .policy-wrap span,
+    .policy-wrap ul li {
+        font-size: 12px;
+        line-height: 19px;
+        letter-spacing: -0.015em;
+    }
+
+    .policy-wrap h2 {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 30px;
+    }
 }

@@ -23,7 +23,9 @@ headerSidebar();
 
 
 
-
+window.addEventListener('resize', () => {
+    location.reload();
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth <= 1024) {
@@ -86,3 +88,54 @@ var swiper = new Swiper(".svcbSwiper", {
         prevEl: ".svcb-button-prev",
     },
 });
+
+
+
+
+
+
+
+
+
+function lerp() {
+    const elements = document.querySelectorAll('.lerp-element');
+
+    document.addEventListener('mousemove', (event) => {
+        const { clientX, clientY } = event;
+
+        elements.forEach(element => {
+            const strength = parseFloat(element.getAttribute('data-power')) || 0.02;
+            const rect = element.getBoundingClientRect();
+            const offsetX = (clientX - (rect.left + rect.width / 2)) * strength;
+            const offsetY = (clientY - (rect.top + rect.height / 2)) * strength;
+
+            gsap.to(element, {
+                x: offsetX,
+                y: offsetY,
+                duration: 0.5,
+                ease: 'power2.out'
+            });
+        });
+    });
+}
+
+lerp();
+
+
+
+
+    gsap.from(".serv-right ul li", {
+        scrollTrigger: {
+            trigger: ".serv-right ul li",
+            start: 'top 80%',
+            end: 'bottom 20%',
+        },
+        scale: 0.9,
+        opacity: 0.5,
+        y: 20,
+        stagger: 0.2,
+        duration: 0.5,
+        ease: 'power2.out'
+    });
+
+
