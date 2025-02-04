@@ -275,12 +275,14 @@
         background: #fff;
         height: 100%;
         overflow: auto;
-        padding: 70px 0px;
+        padding: 70px 0px 20px;
         border-radius: 0px 20px 20px 0px;
         box-shadow: 0px 0px 0px 0px #D7C1F4, 0px 0px 0px 0px #C8A7F5;
         overflow: auto;
         transition: transform 0.4s, box-shadow 0.8s;
         transform: translateX(calc(-100% - 30px));
+        display: flex;
+        flex-direction: column;
     }
 
     nav.head-nav.active {
@@ -1118,6 +1120,11 @@
         min-width: 40px;
     }
 
+    .head-nav .site-btn {
+        display: flex;
+        margin: auto 0 0 20px;
+    }
+
     .svcb-col1 {
         padding: 16px;
     }
@@ -1137,6 +1144,7 @@
     .svcb-col1 h1 img {
         width: 24px;
         height: 24px;
+        margin-bottom: -2px;
     }
 
     .svcb-img img {

@@ -85,6 +85,10 @@ header.site-header {
     flex: 1;
 }
 
+.head-nav .site-btn {
+    display: none;
+}
+
 .nv-close {
     display: none;
 }
@@ -1338,9 +1342,9 @@ footer .parah p {
     font-weight: 400;
     line-height: 52.8px;
     letter-spacing: -0.04em;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 8px; */
     margin-bottom: 12px;
 }
 
@@ -1351,8 +1355,9 @@ footer .parah p {
 .svcb-col1 h1 img {
     width: 44px;
     display: block;
+    display: inline-block;
     height: 44px;
-    align-self: center;
+    margin-bottom: -3px;
 }
 
 .svcb-col1 p {
