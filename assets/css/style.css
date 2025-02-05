@@ -878,6 +878,11 @@ header.site-header {
     justify-content: space-between;
     gap: 20px;
     box-shadow: 0px 10px 0px 0px #E9D9FF;
+    pointer-events: none;
+}
+
+.rev-card * {
+    text-decoration: none !important;
 }
 
 .rev-card p {
@@ -886,6 +891,7 @@ header.site-header {
     line-height: 20.16px;
     letter-spacing: -0.03em;
     color: #4F4F4F;
+    text-decoration: none !important;
 }
 
 .rev-dets h3 {
@@ -895,6 +901,7 @@ header.site-header {
     letter-spacing: -0.04em;
     color: #000;
     margin-bottom: 2px;
+    text-decoration: none !important;
 }
 
 .rev-dets span {
@@ -904,6 +911,7 @@ header.site-header {
     letter-spacing: -0.04em;
     color: #000;
     display: block;
+    text-decoration: none !important;
 }
 
 .revSwiper {
@@ -1123,6 +1131,12 @@ form .check-box label {
     color: #1B1B1B;
 }
 
+form .check-box label a {
+    color: #1B1B1B;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 form .check-box label .fake-cb {
     width: 28px;
     height: 28px;
@@ -1292,6 +1306,10 @@ footer .parah p {
     font-weight: 600;
 }
 
+.ft-botttom span a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
 
 
 
@@ -1763,4 +1781,152 @@ footer .parah p {
 
 .policy-wrap span+ul {
     margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cookie Banner Styles */
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.cookie-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 0px 0px #E9D9FF;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    animation: show 1s linear forwards;
+}
+
+/* Cookie Header */
+.cookie-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.cookie-icon {
+    font-size: 20px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #979797;
+}
+
+.close-btn:hover {
+    color: #5e5e5e;
+}
+
+.cookie-actions .site-btn {
+    font-size: 13px;
+    line-height: 16px;
+    max-width: 140px;
+    padding: 8px;
+    transition: all 0.3s;
+}
+
+.cookie-actions {
+    margin-top: 20px;
+}
+
+.cookie-actions #reject-all {
+    background: transparent;
+    color: #6D00FF;
+    border: 1px solid #6D00FF;
+}
+
+/* Cookie Paragraph */
+.cookie-content p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+    color: #4F4F4F;
+    margin-bottom: 14px;
+    max-width: 340px;
+}
+
+.cookie-link {
+    color: #A15EFB;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.cookie-link:hover {
+    color: #7224d7;
+}
+
+/* Buttons */
+.cookie-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Hide Cookie Banner */
+.hidden {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    display: none;
 }

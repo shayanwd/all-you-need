@@ -31,6 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
             centeredSlides: true,
             spaceBetween: 30,
             loop: true,
+            speed: 800, // Transition speed
+            autoplay: {
+                delay: 3000,       // No delay between slides
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: ".sv-pagination",
                 clickable: true,
@@ -121,18 +126,55 @@ lerp();
 
 
 
-    gsap.from(".serv-right ul li", {
-        scrollTrigger: {
-            trigger: ".serv-right ul li",
-            start: 'top 80%',
-            end: 'bottom 20%',
-        },
-        scale: 0.9,
-        opacity: 0.5,
-        y: 20,
-        stagger: 0.2,
-        duration: 0.5,
-        ease: 'power2.out'
-    });
+gsap.from(".serv-right ul li", {
+    scrollTrigger: {
+        trigger: ".serv-right ul li",
+        start: 'top 80%',
+        end: 'bottom 20%',
+    },
+    scale: 0.9,
+    opacity: 0.5,
+    y: 20,
+    stagger: 0.2,
+    duration: 0.5,
+    ease: 'power2.out'
+});
 
 
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cookieBanner = document.getElementById("cookie-banner");
+    if (cookieBanner) {
+        const closeBtn = document.getElementById("close-cookie");
+        const acceptBtn = document.getElementById("accept-all");
+        const rejectBtn = document.getElementById("reject-all");
+
+        // Check if user has already made a choice
+        if (localStorage.getItem("cookieConsent")) {
+            cookieBanner.classList.add("hidden");
+        }
+
+        // Accept all cookies
+        acceptBtn.addEventListener("click", function () {
+            localStorage.setItem("cookieConsent", "accepted");
+            cookieBanner.classList.add("hidden");
+        });
+
+        // Reject unnecessary cookies
+        rejectBtn.addEventListener("click", function () {
+            localStorage.setItem("cookieConsent", "rejected");
+            cookieBanner.classList.add("hidden");
+        });
+
+        // Close banner manually
+        closeBtn.addEventListener("click", function () {
+            cookieBanner.classList.add("hidden");
+        });
+    }
+});
