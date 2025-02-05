@@ -1,5 +1,6 @@
-function headerSidebar(params) {
+function headerSidebar() {
     const headerNav = document.querySelector('.head-nav');
+    const headerLinkz = headerNav.querySelectorAll('a');
     const headToggle = document.querySelector('.head-toggle');
     const headClose = document.querySelector('.nv-close');
 
@@ -15,17 +16,13 @@ function headerSidebar(params) {
             headerNav.classList.remove('active');
         }
     });
+    headerLinkz.forEach(link => {
+        link.addEventListener('click', () => {
+            headerNav.classList.remove('active');
+        });
+    });
 }
 headerSidebar();
-
-
-
-
-
-
-window.addEventListener('resize', () => {
-    location.reload();
-});
 
 document.addEventListener("DOMContentLoaded", function () {
     if (window.innerWidth <= 1024) {

@@ -1270,7 +1270,7 @@ footer .parah p {
     color: #777777;
 }
 
-.ft-botttom p:has(a) {
+.ft-botttom p a {
     text-decoration: underline;
     text-underline-offset: 3px;
 }
