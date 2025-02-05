@@ -1,6 +1,8 @@
 @media only screen and (max-width: 1200px) {
     .banner-col1 h1 {
         max-width: 660px;
+        font-size: 48px;
+        line-height: 53.8px;
     }
 }
 
@@ -31,6 +33,8 @@
     .banner-col1 h1 {
         width: 100%;
         max-width: 100%;
+        font-size: 58px;
+        line-height: 63.8px;
     }
 
 
@@ -265,6 +269,14 @@
     .swiper-slide-active .service-box .serv-image img {
         transform: scale(1.3);
         transition: 0.7s;
+    }
+
+    .swiper-slide:not(.swiper-slide-active) .service-box {
+        box-shadow: 0px 0px 0px 0px #D7C1F4, 0px 0px 0px 0px #C8A7F5;
+    }
+
+    .swiper-slide:not(.swiper-slide-active) .service-box .serv-image img {
+        transform: scale(1);
     }
 }
 
