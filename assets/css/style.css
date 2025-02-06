@@ -639,29 +639,36 @@ header.site-header {
     position: relative;
 }
 
-.nostri-sec .swiper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.nostri-sec .swiper-wrapper {
+.sv-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px 30px;
     width: 100%;
 }
 
+.svSwiper,
+.sv-pagination {
+    display: none;
+}
+
 /* Apply Swiper on Mobile */
 @media (max-width: 1024px) {
-    .nostri-sec .swiper-wrapper {
+    .sv-grid {
+        display: none;
+    }
+
+    .svSwiper,
+    .sv-pagination {
+        display: block;
+    }
+
+    .svSwiper .swiper-wrapper {
         display: flex;
         flex-wrap: nowrap;
         gap: 0px;
     }
 
-    .nostri-sec .swiper-slide {
+    .svSwiper .swiper-slide {
         flex: 0 0 auto;
         width: 80%;
         display: flex;
@@ -862,7 +869,8 @@ header.site-header {
     height: auto;
 }
 
-.revSwiper .swiper-slide:has(.service-box) {
+.revSwiper .swiper-slide:has(.service-box),
+.swiper-slide:has(.service-box) {
     width: 80%;
     max-width: 393px;
 }

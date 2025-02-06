@@ -566,7 +566,7 @@
         letter-spacing: -0.04em;
     }
 
-    .nostri-sec .swiper-slide,
+    .svSwiper .swiper-slide,
     .swiper-slide:has(.service-box) {
         max-width: 291px;
     }
@@ -1019,7 +1019,7 @@
         letter-spacing: -0.04em;
     }
 
-    .nostri-sec .swiper-slide,
+    .svSwiper .swiper-slide,
     .swiper-slide:has(.service-box) {
         width: 100%;
     }

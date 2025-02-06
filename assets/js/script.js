@@ -25,12 +25,13 @@ function headerSidebar() {
 headerSidebar();
 
 document.addEventListener("DOMContentLoaded", function () {
-    if (window.innerWidth <= 1024) {
+    if (window.innerWidth <= 8000) {
         var swiper = new Swiper(".svSwiper", {
             slidesPerView: "auto",
             centeredSlides: true,
             spaceBetween: 30,
             loop: true,
+            initialSlide: 1,
             speed: 800, // Transition speed
             autoplay: {
                 delay: 3000,       // No delay between slides
