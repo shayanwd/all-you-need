@@ -60,7 +60,7 @@ var swiper = new Swiper(".revSwiper", {
     loop: true,
     speed: 800, // Transition speed
     autoplay: {
-        delay: 3000,       // No delay between slides
+        delay: 5000,       // No delay between slides
         disableOnInteraction: false,
     },
     pagination: {
