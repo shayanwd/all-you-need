@@ -184,6 +184,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const forms = document.querySelectorAll('form');
+    
+    forms.forEach(form => {
+        const submitButton = form.querySelector('button[type="submit"]');
+        const inputs = form.querySelectorAll('input, textarea, select');
+        const privacyCheckbox = form.querySelector('input[type="checkbox"]');
+
+        // Initial check
+        checkFormValidity();
+
+        // Add input event listeners to all form fields
+        inputs.forEach(input => {
+            input.addEventListener('input', checkFormValidity);
+        });
+
+        if (privacyCheckbox) {
+            privacyCheckbox.addEventListener('change', checkFormValidity);
+        }
+
+        function checkFormValidity() {
+            let isValid = true;
+            
+            // Check all required inputs
+            inputs.forEach(input => {
+                if (input.hasAttribute('required')) {
+                    if (input.type === 'checkbox') {
+                        if (!input.checked) isValid = false;
+                    } else {
+                        if (!input.value.trim()) isValid = false;
+                    }
+                }
+            });
+
+            // Check privacy checkbox specifically
+            if (privacyCheckbox && !privacyCheckbox.checked) {
+                isValid = false;
+            }
+
+            // Enable/disable submit button
+            if (submitButton) {
+                submitButton.disabled = !isValid;
+                submitButton.classList.toggle('disabled', !isValid);
+            }
+        }
+    });
+});
+
+
+
+
+
 document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
