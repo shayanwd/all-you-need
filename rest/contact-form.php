@@ -6,10 +6,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding");
 
 // Admin email address
-$adminEmails = [
-
-    "sheraziabubakar@gmail.com"
-];
+$adminEmail = "shayankhanwd@gmail.com";
 
 // Function to send email
 function sendEmail($data, $adminEmail)
