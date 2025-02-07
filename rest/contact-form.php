@@ -7,8 +7,7 @@ header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Ca
 
 // Admin email address
 $adminEmails = [
-    // "allyouneed.forleaving@gmail.com",
-    "shayankhanwd@gmail.com",
+
     "sheraziabubakar@gmail.com"
 ];
 
