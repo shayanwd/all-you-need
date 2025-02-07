@@ -20,7 +20,7 @@ function sendEmail($data, $adminEmail)
     $message .= "Indirizzo email: " . htmlspecialchars($data['email']) . "\n";
     $message .= "Servizio di interesse: " . htmlspecialchars($data['service']) . "\n";
     $message .= "Messaggio: " . htmlspecialchars($data['message']) . "\n";
-    $message .= "Privacy Policy Accepted: " . ($data['privacy'] ? 'Yes' : 'No') . "\n";
+    $message .= "Informativa sulla Privacy Accettata: " . ($data['privacy'] ? 'Yes' : 'No') . "\n";
 
     // Set up email headers
     $headers = "From: " . $data['email'] . "\r\n";

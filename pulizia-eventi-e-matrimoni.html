@@ -218,57 +218,63 @@
 
                 <div class="cnt-right">
                     <h4 class="form-heading">Modulo di Contatto</h4>
-                    <form action="">
+                    <form id="contactForm" action="">
                         <div class="field-row">
                             <div class="field-column">
-                                <label for="">Nome e Cognome</label>
-                                <input type="text" placeholder="Scrivi il tuo nome qui.." required />
+                                <label for="fullName">Nome e Cognome</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Scrivi il tuo nome qui.."
+                                    required />
                             </div>
 
                             <div class="field-column">
-                                <label for="">Numero di Telefono</label>
-                                <input type="text" placeholder="Scrivi il tuo numero qui.." required />
-                            </div>
-                        </div>
-
-                        <div class="field-row">
-                            <div class="field-column">
-                                <label for="">Indirizzo email</label>
-                                <input type="email" placeholder="Inserisci il tuo indirizzo email" required />
+                                <label for="phone">Numero di Telefono</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Scrivi il tuo numero qui.."
+                                    required />
                             </div>
                         </div>
 
                         <div class="field-row">
                             <div class="field-column">
-                                <label for="">Servizio di interesse <span>(opzionale)</span></label>
-                                <select name="" id="">
-                                    <option value="">Pulizia Case Vacanza</option>
-                                    <option value="">Pulizie di Condominio</option>
-                                    <option value="">Pulizia Uffici e Negozi</option>
-                                    <option value="">Pulizia Post Ristrutturazione</option>
-                                    <option value="" selected>Pulizia Eventi e Matrimoni</option>
-                                    <option value="">Pulizia Armadi e Restyling</option>
+                                <label for="email">Indirizzo email</label>
+                                <input type="email" id="email" name="email"
+                                    placeholder="Inserisci il tuo indirizzo email" required />
+                            </div>
+                        </div>
+
+                        <div class="field-row">
+                            <div class="field-column">
+                                <label for="service">Servizio di interesse <span>(opzionale)</span></label>
+                                <select name="service" id="service">
+                                    <option value="" selected disabled>Seleziona il servizio a cui sei interessato
+                                    </option>
+                                    <option value="case_vacanza">Pulizia Case Vacanza</option>
+                                    <option value="condominio">Pulizie di Condominio</option>
+                                    <option value="uffici_negozi">Pulizia Uffici e Negozi</option>
+                                    <option value="post_ristrutturazione">Pulizia Post Ristrutturazione</option>
+                                    <option value="eventi_matrimoni" selected>Pulizia Eventi e Matrimoni</option>
+                                    <option value="armadi_restyling">Pulizia Armadi e Restyling</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="field-row">
                             <div class="field-column">
-                                <label for="">Messaggio</label>
-                                <textarea name="" id="" placeholder="Scrivi il tuo messaggio qui.."></textarea>
+                                <label for="message">Messaggio</label>
+                                <textarea name="message" id="message"
+                                    placeholder="Scrivi il tuo messaggio qui.."></textarea>
                             </div>
                         </div>
 
                         <div class="check-box">
-                            <label for="check">
-                                <input type="checkbox" id="check">
+                            <label for="privacy">
+                                <input type="checkbox" id="privacy" name="privacy" required>
                                 <span class="fake-cb"></span>
                                 <p>Accetto la <a href="privacy-policy.html" target="_blank">privacy policy</a> e la <a
                                         href="cookies-policy.html" target="_blank">cookie policy</a>.</p>
                             </label>
                         </div>
 
-                        <button class="site-btn grad">
+                        <button type="submit" class="site-btn grad">
                             <img src="./assets/images/button-icon.svg" alt="">
                             Invia messaggio
                         </button>
