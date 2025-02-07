@@ -222,12 +222,13 @@ header.site-header {
 .error-message {
     color: #ff0000;
     font-size: 12px;
-    margin-top: 4px;
+    margin-top: -4px;
 }
 
 .form-message {
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     border-radius: 4px;
 }
 
