@@ -11,15 +11,15 @@ $adminEmail = "shayankhanwd@gmail.com";
 // Function to send email
 function sendEmail($data, $adminEmail)
 {
-    $subject = "New Contact Form Submission";
+    $subject = "Nuova Invio del Modulo di Contatto";
 
     // Build a structured email message with all form fields
-    $message = "New Contact Form Submission Details:\n\n";
-    $message .= "Full Name: " . htmlspecialchars($data['fullName']) . "\n";
-    $message .= "Phone: " . htmlspecialchars($data['phone']) . "\n";
-    $message .= "Email: " . htmlspecialchars($data['email']) . "\n";
-    $message .= "Service Required: " . htmlspecialchars($data['service']) . "\n";
-    $message .= "Message: " . htmlspecialchars($data['message']) . "\n";
+    $message = "Nuovi Dettagli di Invio del Modulo di Contatto:\n\n";
+    $message .= "Nome e Cognome: " . htmlspecialchars($data['fullName']) . "\n";
+    $message .= "Numero di Telefono: " . htmlspecialchars($data['phone']) . "\n";
+    $message .= "Indirizzo email: " . htmlspecialchars($data['email']) . "\n";
+    $message .= "Servizio di interesse: " . htmlspecialchars($data['service']) . "\n";
+    $message .= "Messaggio: " . htmlspecialchars($data['message']) . "\n";
     $message .= "Privacy Policy Accepted: " . ($data['privacy'] ? 'Yes' : 'No') . "\n";
 
     // Set up email headers
