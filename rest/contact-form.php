@@ -15,14 +15,12 @@ function sendEmail($data, $adminEmail)
 
     // Build a structured email message with all form fields
     $message = "New Contact Form Submission Details:\n\n";
-    $message .= "First Name: " . htmlspecialchars($data['firstName']) . "\n";
-    $message .= "Last Name: " . htmlspecialchars($data['lastName']) . "\n";
+    $message .= "Full Name: " . htmlspecialchars($data['fullName']) . "\n";
+    $message .= "Phone: " . htmlspecialchars($data['phone']) . "\n";
     $message .= "Email: " . htmlspecialchars($data['email']) . "\n";
-    $message .= "Website: " . htmlspecialchars($data['website']) . "\n";
     $message .= "Service Required: " . htmlspecialchars($data['service']) . "\n";
-    $message .= "Budget Range: " . htmlspecialchars($data['budget']) . "\n";
-    $message .= "Project Timeline: " . htmlspecialchars($data['timeline']) . "\n";
-    $message .= "Project Details: " . htmlspecialchars($data['message']) . "\n";
+    $message .= "Message: " . htmlspecialchars($data['message']) . "\n";
+    $message .= "Privacy Policy Accepted: " . ($data['privacy'] ? 'Yes' : 'No') . "\n";
 
     // Set up email headers
     $headers = "From: " . $data['email'] . "\r\n";
