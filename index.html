@@ -19,6 +19,38 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
+    <style>
+        .field-column.error input,
+        .field-column.error textarea,
+        .field-column.error select {
+            border-color: #ff0000;
+        }
+
+        .error-message {
+            color: #ff0000;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .form-message {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+
 
 </head>
 
@@ -541,7 +573,7 @@
                                 soddisfatto. Hanno fatto un lavoro eccezionale!</p>
                             <div class="rev-dets">
                                 <h3>Casa Castello</h3>
-                                <span>Salo’ (BS)</span>
+                                <span>Salo' (BS)</span>
                             </div>
                         </div>
                     </div>
@@ -561,7 +593,7 @@
                                 meglio. Puntuali, precisi e sempre professionali.</p>
                             <div class="rev-dets">
                                 <h3>Casa Alfredo</h3>
-                                <span>Salo’ (BS)</span>
+                                <span>Salo' (BS)</span>
                             </div>
                         </div>
                     </div>
@@ -626,59 +658,63 @@
 
                 <div class="cnt-right">
                     <h4 class="form-heading">Modulo di Contatto</h4>
-                    <form action="">
+                    <form id="contactForm" action="">
                         <div class="field-row">
                             <div class="field-column">
-                                <label for="">Nome e Cognome</label>
-                                <input type="text" placeholder="Scrivi il tuo nome qui.." required />
+                                <label for="fullName">Nome e Cognome</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Scrivi il tuo nome qui.."
+                                    required />
                             </div>
 
                             <div class="field-column">
-                                <label for="">Numero di Telefono</label>
-                                <input type="text" placeholder="Scrivi il tuo numero qui.." required />
-                            </div>
-                        </div>
-
-                        <div class="field-row">
-                            <div class="field-column">
-                                <label for="">Indirizzo email</label>
-                                <input type="email" placeholder="Inserisci il tuo indirizzo email" required />
+                                <label for="phone">Numero di Telefono</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Scrivi il tuo numero qui.."
+                                    required />
                             </div>
                         </div>
 
                         <div class="field-row">
                             <div class="field-column">
-                                <label for="">Servizio di interesse <span>(opzionale)</span></label>
-                                <select name="" id="">
+                                <label for="email">Indirizzo email</label>
+                                <input type="email" id="email" name="email"
+                                    placeholder="Inserisci il tuo indirizzo email" required />
+                            </div>
+                        </div>
+
+                        <div class="field-row">
+                            <div class="field-column">
+                                <label for="service">Servizio di interesse <span>(opzionale)</span></label>
+                                <select name="service" id="service">
                                     <option value="" selected disabled>Seleziona il servizio a cui sei interessato
                                     </option>
-                                    <option value="">Pulizia Case Vacanza</option>
-                                    <option value="">Pulizie di Condominio</option>
-                                    <option value="">Pulizia Uffici e Negozi</option>
-                                    <option value="">Pulizia Post Ristrutturazione</option>
-                                    <option value="">Pulizia Eventi e Matrimoni</option>
-                                    <option value="">Pulizia Armadi e Restyling</option>
+                                    <option value="case_vacanza">Pulizia Case Vacanza</option>
+                                    <option value="condominio">Pulizie di Condominio</option>
+                                    <option value="uffici_negozi">Pulizia Uffici e Negozi</option>
+                                    <option value="post_ristrutturazione">Pulizia Post Ristrutturazione</option>
+                                    <option value="eventi_matrimoni">Pulizia Eventi e Matrimoni</option>
+                                    <option value="armadi_restyling">Pulizia Armadi e Restyling</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="field-row">
                             <div class="field-column">
-                                <label for="">Messaggio</label>
-                                <textarea name="" id="" placeholder="Scrivi il tuo messaggio qui.."></textarea>
+                                <label for="message">Messaggio</label>
+                                <textarea name="message" id="message"
+                                    placeholder="Scrivi il tuo messaggio qui.."></textarea>
                             </div>
                         </div>
 
                         <div class="check-box">
-                            <label for="check">
-                                <input type="checkbox" id="check">
+                            <label for="privacy">
+                                <input type="checkbox" id="privacy" name="privacy" required>
                                 <span class="fake-cb"></span>
                                 <p>Accetto la <a href="privacy-policy.html" target="_blank">privacy policy</a> e la <a
                                         href="cookies-policy.html" target="_blank">cookie policy</a>.</p>
                             </label>
                         </div>
 
-                        <button class="site-btn grad">
+                        <button type="submit" class="site-btn grad">
                             <img src="./assets/images/button-icon.svg" alt="">
                             Invia messaggio
                         </button>
@@ -773,6 +809,153 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Reset any previous error states
+            resetErrorStates();
+
+            // Validate form
+            if (!validateForm()) {
+                return;
+            }
+
+            // Collect form data
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value,
+                privacy: document.getElementById('privacy').checked
+            };
+
+            // Send the form data
+            fetch('https://shopifydeveloperscompany.com/rest/contact-form.php', {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.code === "200") {
+                        showSuccessMessage();
+                        document.getElementById('contactForm').reset();
+                    } else {
+                        showErrorMessage();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showErrorMessage();
+                });
+        });
+
+        function validateForm() {
+            let isValid = true;
+
+            // Required fields validation
+            const requiredFields = ['fullName', 'phone', 'email', 'message', 'privacy'];
+            requiredFields.forEach(field => {
+                const element = document.getElementById(field);
+                if (field === 'privacy') {
+                    if (!element.checked) {
+                        showError(element, 'Devi accettare la privacy policy');
+                        isValid = false;
+                    }
+                } else if (!element.value.trim()) {
+                    showError(element, 'Campo obbligatorio');
+                    isValid = false;
+                }
+            });
+
+            // Email validation
+            const email = document.getElementById('email');
+            if (email.value.trim() && !isValidEmail(email.value)) {
+                showError(email, 'Inserisci un indirizzo email valido');
+                isValid = false;
+            }
+
+            // Phone validation
+            const phone = document.getElementById('phone');
+            if (phone.value.trim() && !isValidPhone(phone.value)) {
+                showError(phone, 'Inserisci un numero di telefono valido');
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function isValidPhone(phone) {
+            const phoneRegex = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
+            return phoneRegex.test(phone);
+        }
+
+        function showError(element, message) {
+            // Add error class to the parent field-column
+            const fieldColumn = element.closest('.field-column');
+            if (fieldColumn) {
+                fieldColumn.classList.add('error');
+
+                // Create or update error message
+                let errorDiv = fieldColumn.querySelector('.error-message');
+                if (!errorDiv) {
+                    errorDiv = document.createElement('div');
+                    errorDiv.className = 'error-message';
+                    fieldColumn.appendChild(errorDiv);
+                }
+                errorDiv.textContent = message;
+            }
+        }
+
+        function resetErrorStates() {
+            // Remove all error states and messages
+            document.querySelectorAll('.field-column.error').forEach(column => {
+                column.classList.remove('error');
+                const errorMessage = column.querySelector('.error-message');
+                if (errorMessage) {
+                    errorMessage.remove();
+                }
+            });
+        }
+
+        function showSuccessMessage() {
+            // Create and show success message
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'form-message success';
+            messageDiv.textContent = 'Messaggio inviato con successo!';
+            insertMessage(messageDiv);
+        }
+
+        function showErrorMessage() {
+            // Create and show error message
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'form-message error';
+            messageDiv.textContent = 'Si è verificato un errore. Riprova più tardi.';
+            insertMessage(messageDiv);
+        }
+
+        function insertMessage(messageDiv) {
+            const form = document.getElementById('contactForm');
+            form.parentNode.insertBefore(messageDiv, form);
+
+            // Remove message after 5 seconds
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 5000);
+        }
+    </script>
 
 </body>
 
