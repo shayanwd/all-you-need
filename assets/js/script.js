@@ -258,7 +258,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     };
 
     // Send the form data
-    fetch('https://eccentrico.frototype.agency/rest/contact-form.php', {
+    fetch('/rest/contact-form.php', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
