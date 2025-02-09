@@ -945,6 +945,8 @@ header.site-header {
     color: #000;
     margin-bottom: 2px;
     text-decoration: none !important;
+    text-decoration: none;
+    pointer-events: none;
 }
 
 .rev-dets span {
@@ -954,6 +956,8 @@ header.site-header {
     letter-spacing: -0.04em;
     color: #000;
     display: block;
+    text-decoration: none;
+    pointer-events: none;
     text-decoration: none !important;
 }
 
