@@ -5,36 +5,36 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.allyouneedpulizie.com/pulizia-case-vacanza.html</loc>
+        <loc>https://www.allyouneedpulizie.com/pulizia-case-vacanza</loc>
         <priority>0.8</priority>
-        
+
     </url>
     <url>
-        <loc>https://www.allyouneedpulizie.com/pulizie-di-condominio.html</loc>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.allyouneedpulizie.com/pulizia-uffici-e-negozi.html</loc>
+        <loc>https://www.allyouneedpulizie.com/pulizie-di-condominio</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.allyouneedpulizie.com/pulizia-post-ristrutturazione.html</loc>
+        <loc>https://www.allyouneedpulizie.com/pulizia-uffici-e-negozi</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.allyouneedpulizie.com/pulizia-eventi-e-matrimoni.html</loc>
+        <loc>https://www.allyouneedpulizie.com/pulizia-post-ristrutturazione</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.allyouneedpulizie.com/pulizia-armadi-e-restiling.html</loc>
+        <loc>https://www.allyouneedpulizie.com/pulizia-eventi-e-matrimoni</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.allyouneedpulizie.com/privacy-policy.html</loc>
+        <loc>https://www.allyouneedpulizie.com/pulizia-armadi-e-restiling</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.allyouneedpulizie.com/privacy-policy</loc>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://www.allyouneedpulizie.com/cookies-policy.html</loc>
+        <loc>https://www.allyouneedpulizie.com/cookies-policy</loc>
         <priority>0.5</priority>
     </url>
 </urlset>
